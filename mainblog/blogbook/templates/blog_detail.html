@@ -3,5 +3,16 @@
 {% block title %}BlogBook{% endblock %}
 
 {% block content %}
+<div class="container mx-auto px-4 py-8">
+    <img src="{{ blog.photo.url }}" alt="{{ blog.title }}" class="w-full h-64 object-cover rounded-xl shadow-lg mb-5">
+    <h1 class="text-3xl font-bold mb-4">{{ blog.title }}</h1>
+    <p class="text-gray-600 mb-6">By {{ blog.user.username }} on {{ blog.created_at|date:"F j, Y" }}</p>
+    <div class="prose lg:prose-xl">
+        {{ blog.content|linebreaksbr }}
+    </div>
+    <div class="mt-8">
+        <a href="{% url 'blog_list' %}" class="inline-block px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">Back to Blogs</a>
+    </div>
+</div>
 
 {% endblock %}

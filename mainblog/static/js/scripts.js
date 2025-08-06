@@ -38,3 +38,16 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+  const input = document.getElementById('id_photo');
+  if (input) {
+    input.addEventListener('change', function(event) {
+      const preview = document.getElementById('image-preview');
+      if (preview && event.target.files.length) {
+        preview.src = URL.createObjectURL(event.target.files[0]);
+        preview.style.display = 'block';
+      }
+    });
+  }
+});

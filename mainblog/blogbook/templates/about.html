@@ -1,0 +1,67 @@
+{% extends "layout.html" %}
+{% load static %}
+
+{% block title %}About Us{% endblock %}
+
+{% block content %}
+<section class="flex items-center justify-center bg-gradient-to-br from-blue-50 via-white to-blue-100 min-h-screen py-12 px-2">
+  <div class="w-full max-w-3xl rounded-3xl overflow-hidden shadow-2xl bg-white border border-blue-100">
+    <header class="bg-gradient-to-r from-blue-700 to-blue-500 text-white px-8 py-10">
+      <h1 class="text-5xl md:text-6xl font-extrabold mb-3 tracking-tight text-center drop-shadow-lg font-mono">
+        About <span class="text-yellow-400">BlogBook</span>
+      </h1>
+      <p class="text-lg md:text-xl font-medium opacity-90 text-center max-w-2xl mx-auto">
+        Your creative home for sharing stories, tutorials, and new perspectives with the world.
+      </p>
+    </header>
+    <div class="px-6 md:px-10 py-10 space-y-8 bg-white">
+      <section>
+        <h2 class="text-2xl md:text-3xl font-bold mb-3 text-blue-700 flex items-center gap-2">
+          <svg class="h-7 w-7 text-yellow-400 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3"></path><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" /></svg>
+          Our Mission
+        </h2>
+        <p class="text-gray-800 text-lg leading-relaxed md:pl-7 border-l-4 border-blue-200">
+          <span class="font-semibold text-blue-600">BlogBook</span> empowers everyday writers by providing a beautiful, secure blogging platform where creativity, connection, and free expression come first.
+        </p>
+      </section>
+      <section>
+        <h2 class="text-2xl md:text-3xl font-bold mb-3 text-blue-700 flex items-center gap-2">
+          <svg class="h-7 w-7 text-teal-400 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+          Core Values & Features
+        </h2>
+        <ul class="space-y-2 md:pl-7 list-disc list-inside text-gray-700 text-base">
+          <li><span class="font-bold text-blue-900">Freedom of Expression:</span> All voices are welcome — from new writers to seasoned storytellers.</li>
+          <li><span class="font-bold text-blue-900">Secure Authentication:</span> Sign up and log in confidently with solid user account safety.</li>
+          <li><span class="font-bold text-blue-900">Modern, Mobile-First Design:</span> Enjoy crisp visuals and flawless usability on any device.</li>
+          <li><span class="font-bold text-blue-900">Rich Media Support:</span> Effortlessly upload, showcase, and manage beautiful images.</li>
+          <li><span class="font-bold text-blue-900">Positive Community:</span> Engage respectfully and help maintain an empowering atmosphere.</li>
+        </ul>
+      </section>
+      <section>
+        <h2 class="text-2xl md:text-3xl font-bold mb-3 text-blue-700 flex items-center gap-2">
+          <svg class="h-7 w-7 text-pink-400 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" /><path d="M12 16v.01" /><path d="M12 8v4" /></svg>
+          Join Our Community
+        </h2>
+        <p class="text-gray-800 text-lg leading-relaxed md:pl-7 border-l-4 border-pink-200">
+          <span class="font-medium text-blue-600">BlogBook</span> isn’t just software — it’s a gathering place for creative minds. Connect, discover, and inspire through your unique perspective.
+        </p>
+      </section>
+      <section>
+        <h2 class="text-2xl md:text-3xl font-bold mb-3 text-blue-700 flex items-center gap-2">
+          <svg class="h-7 w-7 text-green-400 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3"></path><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" /></svg>
+          Get Started
+        </h2>
+        <p class="text-gray-800 text-lg leading-relaxed md:pl-7 border-l-4 border-green-200">
+          Ready to share your story? <a href="{% url 'blog_create' %}" class="text-blue-600 hover:underline">Create your first blog</a> and join the BlogBook family today!
+        </p>
+      </section>
+    </div>
+      <footer class="border-t pt-6 text-center">
+        <p class="text-gray-400">
+          &copy; BlogBook 2025 &middot; Built for writers, creators, and the curious.
+        </p>
+      </footer>
+    </div>
+  </div>
+</section>
+{% endblock %}

@@ -4,4 +4,16 @@
 
 {% block content %}
 
+<div class="flex flex-col items-center justify-center h-full bg-gradient-to-br from-blue-600 via-slate-900 to-slate-500 text-white">
+    <p class="text-center text-2xl">Are you sure want to delete this blog? This Cannot be undone.</p>
+    <form method="post" class="mt-4">
+        {% csrf_token %}
+        <button type="submit" class="px-5 py-2 bg-red-500 rounded-lg cursor-pointer text-white font-bold hover:bg-red-600 transition duration-200 shadow-lg shadow-red-500/50">
+            Confirm Delete
+        </button>
+        <a href="{% url 'blog_list' %}" class="px-5 py-2 bg-gray-500 rounded-lg cursor-pointer text-white font-bold hover:bg-gray-600 transition duration-200 shadow-lg shadow-gray-500/50">
+            Cancel
+        </a>
+</div>
+
 {% endblock %}

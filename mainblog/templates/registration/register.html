@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% load tailwind_filters %}
+
+{% block title %}BlogBook | Register{% endblock %}
+
+{% block content %}
+<div class="mx-auto min-h-screen px-4 py-7 bg-gradient-to-br from-blue-600 via-slate-900 to-slate-500">
+    
+    <h2 class="text-center mb-5 text-4xl text-yellow-500 font-bold text-shadow-lg/30">Register Form</h2>
+    <div class="max-w-md mx-auto bg-gray-400 p-7 shadow-lg">
+        <form method="post">
+            {% csrf_token %}
+            {{ form|crispy }}
+            <button type="submit"class="mt-4 px-5 py-2 bg-yellow-500 rounded-lg cursor-pointer text-white font-bold hover:bg-yellow-600 transition duration-200 shadow-lg shadow-yellow-500/50">Register</button>
+        </form>
+        <p class="mt-4 text-center font-bold text-black">
+            Already have an account? <a class="text-red-800 underline hover:text-red-900" href="{% url 'login' %}">Login here</a>
+        </p>
+    </div>
+</div>
+{% endblock %}
